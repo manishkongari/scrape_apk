@@ -15,7 +15,7 @@
           <tr>
             <td> <%=  item.at_css(".title-dd a").text %></td>
             <td><%=  raw(item.at_css("img")) %></td>
-            <td><%=  link_to "Download", ("https://apkpure.co/"+ item.at_css(".down a")[:href] )%></td>
+            <td><%=  link_to "Download", ("https://apkpure.co/"+ item.at_css(".down a")[:href] ),target:"_blank"%></td>
           </tr>
       <% end %>
 

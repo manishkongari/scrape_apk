@@ -1,0 +1,39 @@
+<br>
+<div class="container">
+  <div class="row>">
+    <h2>Scrape APK</h2>
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Logo</th>
+        <th>Download Link</th>
+      </tr>
+
+
+      <% @doc.css("dl").each do |item| %>
+          <tr>
+            <td> <%=  item.at_css(".title-dd a").text %></td>
+            <td><%=  raw(item.at_css("img")) %></td>
+            <td><%=  link_to "Download", ("https://apkpure.co/"+ item.at_css(".down a")[:href] )%></td>
+          </tr>
+      <% end %>
+
+    </table>
+    <h2>Scrape Sitemap</h2>
+    <table class="table">
+      <tr>
+        <th>link</th>
+
+      </tr>
+
+
+      <% @xml.xpath('//loc').each do |item| %>
+          <tr>
+            <td> <%=  item.text %></td>
+          </tr>
+      <% end %>
+
+    </table>
+  </div>
+</div>

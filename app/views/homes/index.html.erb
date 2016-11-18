@@ -20,7 +20,11 @@
       <% end %>
 
     </table>
-    <h2>Scrape Sitemap</h2>
+    <div>
+
+      <h2>Scrape Sitemap</h2>
+      <%= link_to "Create CSV",download_csv_homes_path(:csv),class:"btn btn-default" %>
+    </div>
     <table class="table">
       <tr>
         <th>link</th>
@@ -28,7 +32,7 @@
       </tr>
 
 
-      <% @xml.xpath('//loc').each do |item| %>
+      <% @xml.css("loc").each do |item| %>
           <tr>
             <td> <%=  item.text %></td>
           </tr>

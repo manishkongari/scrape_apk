@@ -1,0 +1,30 @@
+<br>
+<div class="container">
+  <div class="row>">
+    <h2>Scrape Play store</h2>
+
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Logo</th>
+        <th>Developer</th>
+      </tr>
+
+
+      <% @doc.css("#body-content .title").each_with_index do |item,index| %>
+          <tr>
+            <td> <%=  item.text %></td>
+            <td><%=  raw(@cover[index]) %></td>
+            <td><%=  @developer[index][:title] %></td>
+
+
+          </tr>
+      <% end %>
+
+
+    </table>
+    </div>
+
+
+</div>

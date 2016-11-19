@@ -9,6 +9,13 @@ class HomesController < ApplicationController
     @xml = Nokogiri::HTML(xml_file)
   end
 
+  def scrape_store
+    url = "https://play.google.com/store/apps/new"
+    @doc = Nokogiri::HTML(open(url))
+    @cover=@doc.css(".cover-image")
+    @developer=@doc.css(".subtitle")
+  end
+
   def download_csv
     require 'csv'
     url = "https://apkpure.co/"

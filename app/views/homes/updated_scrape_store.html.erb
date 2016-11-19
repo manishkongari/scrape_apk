@@ -1,0 +1,103 @@
+<br>
+<div class="container">
+  <div class="row>">
+    <h2>Scrape Play store</h2>
+
+    <br>
+    <h3>New free apps</h3>
+
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Logo</th>
+        <th>Publisher</th>
+      </tr>
+
+      <% @new_free_apps.each_with_index do |item,index| %>
+          <% if @doc.css(".cards-transition-enabled:nth-child(1) .small:nth-child(#{1+index}) .title").text.present? %>
+              <tr>
+                <td> <%=  @doc.css(".cards-transition-enabled:nth-child(1) .small:nth-child(#{1+index}) .title").text %></td>
+                <td> <%=  raw(@doc.css(".cards-transition-enabled:nth-child(1) .small:nth-child(#{1+index}) .cover-image")) %></td>
+                <td> <%=  @doc.css(".cards-transition-enabled:nth-child(1) .small:nth-child(#{1+index}) .subtitle").text %></td>
+
+
+              </tr>
+          <% end %>
+      <% end %>
+    </table>
+    <h3>New paid apps</h3>
+
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Logo</th>
+        <th>Publisher</th>
+      </tr>
+
+      <% @new_paid_apps.each_with_index do |item,index| %>
+          <% if @doc.css(".cards-transition-enabled:nth-child(2) .small:nth-child(#{1+index}) .title").text.present? %>
+
+              <tr>
+                <td> <%=   @doc.css(".cards-transition-enabled:nth-child(2) .small:nth-child(#{1+index}) .title").text  %></td>
+                <td><%=  raw(@doc.css(".cards-transition-enabled:nth-child(2) .small:nth-child(#{1+index}) .cover-image")) %></td>
+                <td><%=   @doc.css(".cards-transition-enabled:nth-child(2) .small:nth-child(#{1+index}) .subtitle").text  %></td>
+
+
+              </tr>
+          <% end %>
+      <% end %>
+    </table>
+    <h3>New free games</h3>
+
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Logo</th>
+        <th>Publisher</th>
+      </tr>
+
+      <% @new_free_games.each_with_index do |item,index| %>
+          <% if @doc.css(".cards-transition-enabled:nth-child(3) .small:nth-child(#{1+index}) .title").text.present? %>
+
+              <tr>
+                <td> <%=   @doc.css(".cards-transition-enabled:nth-child(3) .small:nth-child(#{1+index}) .title").text  %></td>
+                <td><%=  raw(@doc.css(".cards-transition-enabled:nth-child(3) .small:nth-child(#{1+index}) .cover-image")) %></td>
+                <td><%=   @doc.css(".cards-transition-enabled:nth-child(3) .small:nth-child(#{1+index}) .subtitle").text  %></td>
+
+              </tr>
+          <% end %>
+      <% end %>
+    </table>
+    
+    <h3>New paid games</h3>
+
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Logo</th>
+        <th>Publisher</th>
+      </tr>
+
+      <% @new_paid_games.each_with_index do |item,index| %>
+          <% if @doc.css(".cards-transition-enabled:nth-child(4) .small:nth-child(#{1+index}) .title").text.present? %>
+
+              <tr>
+                <td> <%=   @doc.css(".cards-transition-enabled:nth-child(4) .small:nth-child(#{1+index}) .title").text  %></td>
+                <td><%=  raw(@doc.css(".cards-transition-enabled:nth-child(4) .small:nth-child(#{1+index}) .cover-image")) %></td>
+                <td><%=   @doc.css(".cards-transition-enabled:nth-child(4) .small:nth-child(#{1+index}) .subtitle").text  %></td>
+
+
+              </tr>
+          <% end %>
+      <% end %>
+
+
+    </table>
+  </div>
+
+
+</div>

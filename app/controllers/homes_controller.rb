@@ -16,6 +16,18 @@ class HomesController < ApplicationController
     @developer=@doc.css(".subtitle")
   end
 
+  def updated_scrape_store
+    url = "https://play.google.com/store/apps/new"
+    @doc = Nokogiri::HTML(open(url))
+    @new_free_apps=@doc.css(".cards-transition-enabled:nth-child(1) .card-click-target")
+
+    @new_paid_apps=@doc.css(".cards-transition-enabled:nth-child(2) .card-click-target")
+    @new_free_games=@doc.css(".cards-transition-enabled:nth-child(3) .card-click-target")
+    @new_paid_games=@doc.css(".cards-transition-enabled:nth-child(4) .card-click-target")
+    @cover=@doc.css(".cover-image")
+    @developer=@doc.css(".subtitle")
+  end
+
   def download_csv
     require 'csv'
     url = "https://apkpure.co/"

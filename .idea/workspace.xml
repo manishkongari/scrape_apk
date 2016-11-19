@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a10aa82d-8f9a-4f0d-9fc7-f450d6ece136" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/homes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/homes_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/homes/scrape_store.html.erb" afterPath="$PROJECT_DIR$/app/views/homes/scrape_store.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="scrape-apk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/homes/scrape_store.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+              <caret line="4" column="77" selection-start-line="4" selection-start-column="77" selection-end-line="4" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -449,12 +447,12 @@
       <workItem from="1479510078839" duration="2187000" />
       <workItem from="1479512648432" duration="683000" />
       <workItem from="1479513372108" duration="1866000" />
-      <workItem from="1479516801668" duration="4648000" />
+      <workItem from="1479516801668" duration="4811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15788000" />
+    <option name="totallyTimeSpent" value="15951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="749" extended-state="6" />
@@ -747,7 +745,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/homes/scrape_store.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          <caret line="4" column="77" selection-start-line="4" selection-start-column="77" selection-end-line="4" selection-end-column="77" />
           <folding />
         </state>
       </provider>
